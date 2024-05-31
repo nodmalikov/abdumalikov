@@ -1,11 +1,11 @@
 /* CUSTOM-PROPS */
 :root {
     --text-color: #222;
-    --bg-green: lightblue;
+    --bg-green: yellow;
     --bg-light: #fff;
 }
 
-/* FONTS */
+/* GOOGLE-FONTS */
 @font-face {
     font-family: "Poppins";
     src: url("../font/") format("woff2"),
@@ -215,6 +215,12 @@ img {
 
 .bi-moon-fill {
     color: gold;
+}
+
+.hero-subtitle-github {
+    text-decoration: none;
+    display: inline-block;
+    color: red;
 }
 
 .divider {
