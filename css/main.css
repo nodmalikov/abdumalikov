@@ -1,7 +1,7 @@
 /* CUSTOM-PROPS */
 :root {
     --text-color: #222;
-    --bg-green: yellow;
+    --bg-green: #dfdf0f;
     --bg-light: #fff;
 }
 
@@ -13,6 +13,7 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+    color: orangered;
 }
 
 @font-face {
@@ -215,12 +216,6 @@ img {
 
 .bi-moon-fill {
     color: gold;
-}
-
-.hero-subtitle-github {
-    text-decoration: none;
-    display: inline-block;
-    color: red;
 }
 
 .divider {
