@@ -1,27 +1,24 @@
-// O'zgaruvchilar
-// const phone = 'iphone 14 pro'
-// console.log(phone)
-
-// const phoneCamera = '48MP'
-// console.log(phoneCamera)
-
-// const elText = document.querySelector('.text')
-// const elButton = document.querySelector('.button')
-
-// elButton.addEventListener('click', function () {
-//     elText.textContent = 'Boshqa nom';
-// });
-
 const elLightButton = document.querySelector('.light-button');
 const elDarkButton = document.querySelector('.dark-button');
+const body = document.body;
 
-elDarkButton.addEventListener('click', function () {
-    document.body.classList.add('dark-mode');
+// SAQLANGAN DARK MODE HOLATINI TEKSHIRISH
+document.addEventListener('DOMContentLoaded', function() {
+    const darkMode = localStorage.getItem('darkMode'); // RETRIEVE DARK MODE STATE FROM LOCALSTORAGE
+
+    if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
 });
 
-elLightButton.addEventListener('click', function () {
-    document.body.classList.remove('dark-mode');
+elDarkButton.addEventListener('click', function() {
+    body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
 });
 
-
-
+elLightButton.addEventListener('click', function() {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('darkMode', 'disabled');
+});
