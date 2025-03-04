@@ -165,6 +165,12 @@ h6 {
 	margin-right: 8px;
 }
 
+.header .logo:focus {
+	line-height: 1;
+	margin-bottom: 15px;
+	outline: none;
+}
+
 .header .logo h1 {
 	font-size: 24px;
 	margin: 0;
