@@ -197,24 +197,8 @@ h6 {
 	transition: 0.3s;
 }
 
-.header .social-links .twitter:hover {
-	background-color: #1ec864;
-}
-
-.header .social-links .facebook:hover {
-	background-color: #1e5cc8;
-}
-
-.header .social-links .instagram:hover {
-	background-color: #c81e79;
-}
-
-.header .social-links .telegram:hover {
-	background-color: #1e9bc8;
-}
-
-.header .social-links .linkedin:hover {
-	background-color: #e0d451;
+.header .social-links a:hover {
+	background-color: #149ddd;
 }
 
 @media (min-width: 1200px) {
@@ -935,6 +919,10 @@ section,
 
 .services .service-item:hover .icon {
 	background: var(--surface-color);
+}
+
+.services .service-item:hover {
+	cursor: pointer;
 }
 
 .services .service-item:hover .icon i {
