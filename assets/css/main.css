@@ -628,6 +628,10 @@ section,
 	all: unset;
 }
 
+.pulse-btn:hover {
+	color: #f4fafd;
+}
+
 .pulse {
 	width: 5rem;
 	height: 5rem;
@@ -638,7 +642,7 @@ section,
 	justify-content: center;
 	position: relative;
 	font-size: 2rem;
-	color: #e4ded2;
+	color: #f4f4f4;
 	z-index: 3;
 }
 
