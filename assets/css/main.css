@@ -429,6 +429,7 @@ h6 {
 	height: 44px;
 	border-radius: 50px;
 	transition: all 0.4s;
+	border: 0;
 }
 
 .scroll-top i {
