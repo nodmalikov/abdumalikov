@@ -710,6 +710,10 @@ section,
 	line-height: 0;
 }
 
+.me-img {
+	border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
