@@ -66,6 +66,10 @@ img {
 	font-size: 30px;
 }
 
+.fa-copyright {
+	font-size: 15px;
+}
+
 /* MENU-SCROLL */
 .menu-scroll {
 	position: fixed;
