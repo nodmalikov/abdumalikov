@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nodirbek Abdumalikov - @nodmalikov">
+    <meta name="description"
+        content="Portfolio website of Nodirbek Abdumalikov, frontend developer skilled in HTML, CSS, JavaScript, and Bootstrap. Explore live projects and contact for collaboration.">
+
+    <title>Abdumalikov Nodirbek</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- CSS-LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+
+    <!-- SITE-MAIN -->
+    <main class="main-content">
+        <div class="bg-white dark:bg-gray-700" id="about">
+            <header class="absolute inset-x-0 top-0 z-50">
+                <nav aria-label="Global" class="flex items-center justify-end lg:justify-center p-6 lg:px-8">
+                    <div class="flex lg:flex">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <img src="" alt="" class="h-8 w-auto" />
+                        </a>
+                    </div>
+                    <div class="flex lg:hidden">
+                        <button type="button" command="show-modal" commandfor="mobile-menu"
+                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white">
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex lg:gap-x-12 p-2 rounded" id="nav-menu">
+                        <a href="#about" class="text-sm/6 font-semibold text-gray-900 dark:text-white">About</a>
+                        <a href="#portfolio" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Portfolio</a>
+                        <a href="#contact" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Contact</a>
+                    </div>
+                </nav>
+                <el-dialog>
+                    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                            <el-dialog-panel
+                                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-700">
+                                <div class="flex items-center justify-end">
+                                    <button type="button" command="close" commandfor="mobile-menu"
+                                        class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-white">
+                                        <span class="sr-only">Close menu</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            data-slot="icon" aria-hidden="true" class="size-6">
+                                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="mt-6 flow-root">
+                                    <div class="-my-6 divide-y divide-gray-500/10">
+                                        <div class="space-y-2 py-6">
+                                            <a href="#about"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">About</a>
+                                            <a href="#portfolio"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Portfolio</a>
+                                            <a href="#contact"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Contact</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-dialog-panel>
+                        </div>
+                    </dialog>
+                </el-dialog>
+            </header>
+
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div aria-hidden="true"
+                    class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
+                    </div>
+                </div>
+                <div class="mx-auto max-w-2xl px-6 py-24 sm:py-32 lg:px-8">
+                    <div class="text-center">
+                        <img src="./img/nodmalikov.png" alt="Nodirbek's image" class="rounded-full ml-auto mr-auto"
+                            width="250" height="250">
+                        <h1
+                            class="text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mt-5 dark:text-white">
+                            Nodirbek Abdumalikov</h1>
+                        <p class="mt-5 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-white">Hi!
+                            I'm a passionate
+                            Frontend Developer specializing in responsive, modern, and high-performance websites. I
+                            build sleek, fast, and user-friendly sites using HTML, CSS, JavaScript, and Bootstrap.</p>
+                        <div class="flex justify-center mt-8">
+                            <div
+                                class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 uppercase dark:text-white">
+                                My projects - <a href="https://github.com/nodmalikov"
+                                    class="font-semibold text-indigo-600 dark:text-green-400"><span aria-hidden="true"
+                                        class="absolute inset-0"></span>Source Code</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 mt-8">
+                            <a target="_blank" href="https://linkedin.com/in/nodmalikov">
+                                <i class="fa-brands fa-linkedin dark:text-white"></i>
+                            </a>
+                            <a target="_blank" href="https://t.me/nodmalikov">
+                                <i class="fa-brands fa-telegram dark:text-white"></i>
+                            </a>
+                            <a target="_blank" href="https://instagram.com/nodmalikov">
+                                <i class="fa-brands fa-instagram dark:text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div aria-hidden="true"
+                    class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                        class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARENT CONTAINER -->
+        <div class="px-[5%] py-18 sm:py-32 lg:px-8 dark:bg-gray-600" id="portfolio">
+            <div class="mx-auto max-w-2xl text-center mb-20">
+                <h2
+                    class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+                    My Portfolio
+                </h2>
+                <p class="mt-2 text-lg/8 text-gray-600 dark:text-white">A collection of websites and applications I’ve
+                    built using
+                    modern web technologies.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/zosale.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Zosale</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript, Bootstrap</p>
+                        <a target="_blank" href="https://zosale.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/team.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">My team</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-team.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/shortening.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Shortly</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-shortening.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/rich-bank.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Easybank</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, Bootstrap, JavaScript</p>
+                        <a target="_blank" href="https://rich-bank.vercel.app"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/positivus.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Positivus</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-positivus.vercel.app"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/portfolio.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Portfolio</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-portfolio.vercel.app"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/n24.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">N24</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-n24.vercel.app"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/fngsk.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Fngsk</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, Bootstrap, JavaScript</p>
+                        <a target="_blank" href="https://fngsk.vercel.app"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/coffee-roasters.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Coffee roasters</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-coffee.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/bookmark.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Bookmark</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-bookmark.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/countries.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Countries</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-countries.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="bg-gray-200 dark:bg-gray-300 rounded-2xl overflow-hidden shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <img src="./img/portfolio/apple-watch.png" alt="Project Image" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Apple watch</h2>
+                        <p class="text-sm text-gray-600 mb-3">HTML, CSS, JavaScript</p>
+                        <a target="_blank" href="https://uz-watch.vercel.app/"
+                            class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Live
+                            demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="isolate bg-white px-6 py-18 sm:py-32 lg:px-8 dark:bg-gray-700" id="contact">
+            <div aria-hidden="true"
+                class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                    class="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-288.75">
+                </div>
+            </div>
+            <div class="mx-auto max-w-2xl text-center">
+                <h2
+                    class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+                    Contact me
+                </h2>
+                <p class="mt-2 text-lg/8 text-gray-600 dark:text-white">Let's collaborate to bring your project to
+                    completion.
+                </p>
+            </div>
+            <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                        <label for="first-name"
+                            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">First name</label>
+                        <div class="mt-2.5">
+                            <input id="first-name" type="text" name="ism" autocomplete="given-name"
+                                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Last
+                            name</label>
+                        <div class="mt-2.5">
+                            <input id="last-name" type="text" name="familiya" autocomplete="family-name"
+                                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="email"
+                            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Email</label>
+                        <div class="mt-2.5">
+                            <input id="email" type="email" name="pochta" autocomplete="email"
+                                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="message"
+                            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Message</label>
+                        <div class="mt-2.5">
+                            <textarea id="message" name="message" rows="4"
+                                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <button type="submit"
+                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's
+                        talk</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- SITE-FOOTER -->
+    <footer
+        class="site-footer flex flex-col-reverse justify-between items-center p-8 md:flex-row gap-5 text-center md:text-left dark:bg-gray-600">
+        <span class="dark:text-white">© 2025 Nodirbek Abdumalikov - @nodmalikov, all rights reserved.</span>
+        <div class="flex justify-center items-center gap-4">
+            <a target="_blank" href="https://facebook.com/nodmalikov">
+                <i class="fa-brands fa-facebook dark:text-white"></i>
+            </a>
+            <a target="_blank" href="https://x.com/nodmalikov">
+                <i class="fa-brands fa-x-twitter dark:text-white"></i>
+            </a>
+            <a target="_blank" href="https://youtube.com/@nodmalikov">
+                <i class="fa-brands fa-youtube dark:text-white"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JS-LINKS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
