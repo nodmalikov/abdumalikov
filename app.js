@@ -52,4 +52,24 @@ window.addEventListener('DOMContentLoaded', () => {
 				form.reset()
 			})
 	})
+
+	// SCROLL TOP
+	let scrollTop = document.querySelector('.scroll-top')
+
+	function toggleScrollTop() {
+		if (scrollTop) {
+			window.scrollY > 100
+				? scrollTop.classList.add('active')
+				: scrollTop.classList.remove('active')
+		}
+	}
+	scrollTop.addEventListener('click', e => {
+		e.preventDefault()
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	})
+
+	document.addEventListener('scroll', toggleScrollTop)
 })

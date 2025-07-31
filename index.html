@@ -46,9 +46,12 @@
                         </button>
                     </div>
                     <div class="hidden lg:flex lg:gap-x-12 p-2 rounded" id="nav-menu">
-                        <a href="#about" class="text-sm/6 font-semibold text-gray-900 dark:text-white">About</a>
-                        <a href="#portfolio" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Portfolio</a>
-                        <a href="#contact" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Contact</a>
+                        <a data-aos="zoom-in" data-aos-delay="800" href="#about"
+                            class="text-sm/6 font-semibold text-gray-900 dark:text-white">About</a>
+                        <a data-aos="zoom-in" data-aos-delay="800" href="#portfolio"
+                            class="text-sm/6 font-semibold text-gray-900 dark:text-white">Portfolio</a>
+                        <a data-aos="zoom-in" data-aos-delay="800" href="#contact"
+                            class="text-sm/6 font-semibold text-gray-900 dark:text-white">Contact</a>
                     </div>
                 </nav>
                 <el-dialog>
@@ -92,20 +95,24 @@
                         class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
                     </div>
                 </div>
-                <div class="mx-auto max-w-2xl px-6 py-24 sm:py-32 lg:px-8">
+                <div class="mx-auto max-w-2xl py-24 sm:py-32">
                     <div class="text-center">
                         <img src="./img/nodmalikov.png" alt="Nodirbek's image" class="rounded-full ml-auto mr-auto"
                             width="250" height="250">
                         <h1
-                            class="text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mt-5 dark:text-white">
-                            Nodirbek Abdumalikov</h1>
-                        <p class="mt-5 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-white">Hi!
-                            I'm a passionate
-                            Frontend Developer specializing in responsive, modern, and high-performance websites. I
-                            build sleek, fast, and user-friendly sites using HTML, CSS, JavaScript, and Bootstrap.</p>
+                            class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mt-5 dark:text-white">
+                            Nodirbek</h1>
+                        <p class="mt-4 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-white">Hi!
+                            I'm a passionate Frontend Developer specializing in building responsive, modern, and
+                            high-performance websites. I create sleek, fast, and user-friendly interfaces using
+                            <span class="html-color">HTML</span>,
+                            <span class="css-color">CSS</span>, <span class="javascript-color">JavaScript</span>, <span
+                                class="bootstrap-color">Bootstrap</span>, and <span class="tailwind-color">Tailwind
+                                CSS</span>.
+                        </p>
                         <div class="flex justify-center mt-8">
                             <div
-                                class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 uppercase dark:text-white">
+                                class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-green-500 hover:ring-green-600 uppercase dark:text-white transition">
                                 My projects - <a href="https://github.com/nodmalikov"
                                     class="font-semibold text-indigo-600 dark:text-green-400"><span aria-hidden="true"
                                         class="absolute inset-0"></span>Source Code</a>
@@ -337,7 +344,7 @@
                             name</label>
                         <div class="mt-2.5">
                             <input id="last-name" type="text" name="familiya" autocomplete="family-name"
-                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 bg-gray-900 dark:text-white" />
+                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
                         </div>
                     </div>
                     <div class="sm:col-span-2">
@@ -345,7 +352,7 @@
                             class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Email</label>
                         <div class="mt-2.5">
                             <input id="email" type="email" name="pochta" autocomplete="email"
-                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 bg-gray-900 dark:text-white" />
+                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
                         </div>
                     </div>
                     <div class="sm:col-span-2">
@@ -353,7 +360,7 @@
                             class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Message</label>
                         <div class="mt-2.5">
                             <textarea id="message" name="message" rows="4"
-                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 bg-gray-900 dark:text-white"></textarea>
+                                class="block w-full rounded-md bg-gray-300 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white"></textarea>
                         </div>
                     </div>
                 </div>
@@ -388,6 +395,10 @@
             </a>
         </div>
     </footer>
+
+    <!-- Scroll Top -->
+    <a id="scroll-top" class="scroll-top flex items-center justify-center"><i
+            class="fa-solid fa-arrow-up text-white text-2xl"></i></a>
 
     <!-- JS-LINKS -->
     <script src="app.js"></script>
