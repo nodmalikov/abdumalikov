@@ -1,10 +1,5 @@
 @import 'tailwindcss';
 
-/* CUSTOM-PROPS */
-:root {
-	--striking-color: #800080;
-}
-
 /* GLOBAL */
 html {
 	height: 100%;
@@ -66,27 +61,6 @@ img {
 .fa-facebook,
 .fa-youtube {
 	font-size: 30px;
-}
-
-/* TAG-COLOR */
-.html-color {
-	color: #e5532d;
-}
-
-.css-color {
-	color: #2d53e5;
-}
-
-.javascript-color {
-	color: #f7e025;
-}
-
-.bootstrap-color {
-	color: #8c19fe;
-}
-
-.tailwind-color {
-	color: #3ebff8;
 }
 
 /* SCROLL-TOP */
