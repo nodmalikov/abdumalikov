@@ -63,6 +63,10 @@ img {
 	font-size: 30px;
 }
 
+.hero-img {
+	color: rgb(7, 217, 113, 0.2);
+}
+
 /* SCROLL-TOP */
 .scroll-top {
 	position: fixed;
@@ -76,10 +80,6 @@ img {
 	height: 44px;
 	border-radius: 50px;
 	transition: all 0.4s;
-}
-
-.scroll-top:hover {
-	background-color: rgb(16, 24, 40, 0.6);
 }
 
 .scroll-top.active {
