@@ -1,1 +1,75 @@
-window.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector("#nav-menu"),t=document.querySelector(".loader-wrapper");function s(){window.scrollY>0?e.classList.add("menu-scroll"):e.classList.remove("menu-scroll")}setTimeout(()=>{t.style.display="none",s(),window.addEventListener("scroll",s)},1500);let a=document.querySelector("form");a.addEventListener("submit",e=>{e.preventDefault();let t=new FormData(a),s={};t.forEach((e,t)=>{s[t]=e}),fetch("https://api.telegram.org/bot7712362635:AAEsc4ysR8uaniRRNMTWWRiDVIJj3lxNRkY/sendMessage",{method:"POST",headers:{"Content-type":"application/json"},body:JSON.stringify({chat_id:"7344685069",text:`Name: ${s.ism}. Surname: ${s.familiya}. Email: ${s.pochta}. Message: ${s.message}`})}).then(()=>{alert("Message sent successfully!")}).catch(()=>{alert("An error occurred. Please try again!")}).finally(()=>{a.reset()})});let l=document.querySelector(".scroll-top");function r(){l&&(window.scrollY>100?l.classList.add("active"):l.classList.remove("active"))}l.addEventListener("click",e=>{e.preventDefault(),window.scrollTo({top:0,behavior:"smooth"})}),document.addEventListener("scroll",r)});
+window.addEventListener('DOMContentLoaded', () => {
+	// SCROLL-MENU
+	const nav = document.querySelector('#nav-menu')
+	const loaderWrapper = document.querySelector('.loader-wrapper')
+
+	function scrollHeight() {
+		if (window.scrollY > 0) {
+			nav.classList.add('menu-scroll')
+		} else {
+			nav.classList.remove('menu-scroll')
+		}
+	}
+
+	// LOADER
+	setTimeout(() => {
+		loaderWrapper.style.display = 'none'
+
+		scrollHeight()
+		window.addEventListener('scroll', scrollHeight)
+	}, 1500)
+
+	// FORM
+	const form = document.querySelector('form'),
+		telegramTokenBot = '7712362635:AAEsc4ysR8uaniRRNMTWWRiDVIJj3lxNRkY',
+		chatId = '7344685069'
+
+	form.addEventListener('submit', event => {
+		event.preventDefault()
+
+		const formData = new FormData(form)
+
+		const object = {}
+		formData.forEach((value, key) => {
+			object[key] = value
+		})
+
+		fetch(`https://api.telegram.org/bot${telegramTokenBot}/sendMessage`, {
+			method: 'POST',
+			headers: { 'Content-type': 'application/json' },
+			body: JSON.stringify({
+				chat_id: chatId,
+				text: `Name: ${object.ism}. Surname: ${object.familiya}. Email: ${object.pochta}. Message: ${object.message}`,
+			}),
+		})
+			.then(() => {
+				alert('Message sent successfully!')
+			})
+			.catch(() => {
+				alert('An error occurred. Please try again!')
+			})
+			.finally(() => {
+				form.reset()
+			})
+	})
+
+	// SCROLL TOP
+	let scrollTop = document.querySelector('.scroll-top')
+
+	function toggleScrollTop() {
+		if (scrollTop) {
+			window.scrollY > 100
+				? scrollTop.classList.add('active')
+				: scrollTop.classList.remove('active')
+		}
+	}
+	scrollTop.addEventListener('click', e => {
+		e.preventDefault()
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	})
+
+	document.addEventListener('scroll', toggleScrollTop)
+})
