@@ -159,3 +159,10 @@ input:-webkit-autofill {
 	width: 140px;
 	height: 140px;
 }
+
+@media only screen and (max-width: 768px) {
+	.skills svg {
+		width: 120px;
+		height: 120px;
+	}
+}
