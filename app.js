@@ -1,13 +1,20 @@
 window.addEventListener('DOMContentLoaded', () => {
 	// SCROLL-MENU
 	const nav = document.querySelector('#nav-menu')
+	const scrollTexts = document.querySelectorAll('.scroll-text')
 	const loaderWrapper = document.querySelector('.loader-wrapper')
 
 	function scrollHeight() {
 		if (window.scrollY > 0) {
 			nav.classList.add('menu-scroll')
+			scrollTexts.forEach(scrollText => {
+				scrollText.classList.add('scroll-text-active')
+			})
 		} else {
 			nav.classList.remove('menu-scroll')
+			scrollTexts.forEach(scrollText => {
+				scrollText.classList.remove('scroll-text-active')
+			})
 		}
 	}
 
