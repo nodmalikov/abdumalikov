@@ -110,4 +110,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			langMenuMobile.classList.add('hidden')
 		}
 	})
+
+	// NAV-ITEM
+	const navItems = document.querySelectorAll('#nav-menu a')
+	navItems.forEach(navItem => {
+		navItem.addEventListener('click', () => {
+			navItems.forEach(item => item.classList.remove('nav-item-active'))
+
+			navItem.classList.add('nav-item-active')
+		})
+	})
 })

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Nodirbek Abdumalikov</title>
+	<meta name="description"
+		content="Добро пожаловать в портфолио Нодирбека Абдумаликова — frontend-разработчика, специализирующегося на HTML, CSS, JavaScript и адаптивном дизайне с использованием Tailwind CSS." />
+	<meta name="author" content="Нодирбек Абдумаликов" />
+	<meta name="keywords"
+		content="Нодирбек, frontend-разработчик, веб-разработчик, HTML, CSS, JavaScript, Tailwind CSS, портфолио" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://abdumalikov.vercel.app/" />
+	<meta property="og:title" content="Нодирбек Абдумаликов" />
+	<meta property="og:description"
+		content="Портфолио Нодирбека — frontend-разработчика, создающего быстрые и SEO-оптимизированные сайты." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://abdumalikov.vercel.app/" />
+
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+	<!-- CSS-LINKS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+	<link rel="stylesheet" href="../main.css">
+	<link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+</head>
+
+
+<body>
+	<!-- SITE-MAIN -->
+	<main class="main-content">
+
+		<!-- О СЕБЕ -->
+		<section id="about" class="bg-white dark:bg-gray-800">
+			<div class="container">
+				<header class="absolute inset-x-0 top-0 z-20">
+					<nav aria-label="Global" class="flex items-center justify-end lg:justify-center p-6 lg:px-8">
+
+						<!-- НАВИГАЦИЯ -->
+						<div class="flex lg:hidden">
+							<button type="button" command="show-modal" commandfor="mobile-menu"
+								class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white">
+								<span class="sr-only">Открыть главное меню</span>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+									aria-hidden="true" class="size-6">
+									<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+
+						<div class="hidden lg:flex items-center lg:gap-x-12 p-2 rounded" id="nav-menu">
+							<a href="#about" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">О себе</a>
+							<a href="#education"
+								class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Образование</a>
+							<a href="#skills" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Навыки</a>
+							<a href="#portfolio"
+								class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Портфолио</a>
+							<a href="#contact" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Контакты</a>
+
+							<!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+							<div class="relative inline-block text-left">
+								<button id="langToggle-desktop" type="button"
+									class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-white">
+									<i class="fa-solid fa-language"></i>
+									<span class="font-bold text-sm font-sans">RU</span>
+									<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+									</svg>
+								</button>
+
+								<!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+								<div id="langMenu-desktop"
+									class="absolute mt-2 w-30 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-md shadow-lg hidden z-10">
+									<a href="../src/index-en.html"
+										class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+										<span class="text-sm font-sans">EN</span>
+									</a>
+									<a href="../index.html"
+										class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+										<span class="text-sm font-sans">UZ</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+					<!-- МОБИЛЬНОЕ МЕНЮ -->
+					<el-dialog>
+						<dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+							<div tabindex="0" class="fixed inset-0 focus:outline-none">
+								<el-dialog-panel
+									class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 max-h-screen sm:ring-gray-900/10 dark:bg-gray-700">
+									<div class="flex items-center justify-end">
+										<button type="button" command="close" commandfor="mobile-menu"
+											class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-white">
+											<span class="sr-only">Закрыть меню</span>
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+												aria-hidden="true" class="size-6">
+												<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<div class="mt-6 flow-root">
+										<div class="-my-6 divide-y divide-gray-500/10">
+											<div class="space-y-2 py-6">
+												<a href="#about"
+													class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">О
+													себе</a>
+												<a href="#education"
+													class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Образование</a>
+												<a href="#skills"
+													class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Навыки</a>
+												<a href="#portfolio"
+													class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Портфолио</a>
+												<a href="#contact"
+													class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Контакты</a>
+
+												<!-- ЯЗЫК -->
+												<div class="relative inline-block text-left z-50">
+													<button id="langToggle-mobile" type="button"
+														class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-white">
+														<i class="fa-solid fa-language"></i>
+														<span class="font-bold text-sm font-sans">RU</span>
+														<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+																d="M19 9l-7 7-7-7" />
+														</svg>
+													</button>
+
+													<!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+													<div id="langMenu-mobile"
+														class="absolute mt-2 w-30 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-md shadow-lg hidden z-10">
+														<a href="../src/index-en.html"
+															class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+															<span class="text-sm font-sans">EN</span>
+														</a>
+														<a href="../index.html"
+															class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+															<span class="text-sm font-sans">UZ</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</el-dialog-panel>
+							</div>
+						</dialog>
+					</el-dialog>
+				</header>
+
+				<!-- СЕКЦИЯ "О СЕБЕ" -->
+				<div class="relative isolate px-2 pt-14 lg:px-4">
+					<div class="mx-auto max-w-2xl py-18 sm:py-32">
+						<div class="text-center">
+							<img src="../img/nodmalikov.png" alt="Фото Нодирбека"
+								class="rounded-full ml-auto mr-auto border-[10px] hero-img" width="250" height="250">
+							<h1
+								class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mt-5 dark:text-white">
+								Нодирбек
+							</h1>
+							<p class="mt-4 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-white">
+								Привет! Я frontend-разработчик, увлечённый созданием адаптивных, современных и высокопроизводительных
+								сайтов. Разрабатываю стильные и удобные интерфейсы с использованием HTML, CSS, JavaScript и современных
+								frontend-фреймворков.
+							</p>
+							<div class="flex justify-center mt-8">
+								<div
+									class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-green-500 hover:ring-green-600 uppercase dark:text-white transition">
+									Мои проекты • <a href="https://github.com/nodmalikov"
+										class="font-semibold text-indigo-600 dark:text-green-400"><span aria-hidden="true"
+											class="absolute inset-0"></span>Исходный код</a>
+								</div>
+							</div>
+							<div class="flex items-center justify-center gap-4 mt-8">
+								<a target="_blank" href="https://linkedin.com/in/nodmalikov">
+									<i class="fa-brands fa-linkedin dark:text-white"></i>
+								</a>
+								<a target="_blank" href="https://t.me/nodmalikov">
+									<i class="fa-brands fa-telegram dark:text-white"></i>
+								</a>
+								<a target="_blank" href="https://instagram.com/nodmalikov">
+									<i class="fa-brands fa-instagram dark:text-white"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<hr class="border-black dark:border-white">
+
+		<!-- ОБРАЗОВАНИЕ -->
+		<section id="education" class="bg-white dark:bg-gray-700">
+			<div class="container">
+				<div class="isolate px-2 py-18 sm:py-32 lg:px-8">
+					<div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+						<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+							Образование
+						</h2>
+						<p class="mt-4 text-lg/8 text-gray-600 dark:text-white">
+							Сформировал прочную теоретическую и практическую базу посредством онлайн-курсов и самостоятельного
+							изучения.
+						</p>
+					</div>
+
+					<div class="max-w-[95vw] md:max-w-[85vw] mx-auto p-2">
+						<div
+							class="flex flex-col-reverse xl:flex-row-reverse items-stretch gap-6 bg-white dark:bg-gray-500 shadow hover:shadow-xl transition-shadow duration-300 rounded-4xl p-4 md:p-6 w-full">
+
+							<!-- Rasm -->
+							<div class="w-full xl:w-1/2">
+								<img src="../img/sertifikat.png" alt="Сертификат" class="w-full h-auto rounded-4xl object-cover" />
+							</div>
+
+							<!-- Matn -->
+							<div class="w-full xl:w-1/2 text-center md:text-left">
+								<h2 class="text-2xl font-bold text-amber-500 text-center mb-2">Как я стал разработчиком</h2>
+								<div class="text-gray-950 dark:text-white flex flex-col gap-3 text-lg text-medium">
+									<p>
+										Мне 25 лет. Мой путь в веб-разработке начался с бесплатных ресурсов на YouTube и других открытых
+										платформах. Когда интерес усилился, я записался на курс Frontend Praktikum на
+										<a href="https://mohirdev.uz/" class="text-green-500">mohirdev.uz</a>, чтобы углубить свои навыки.
+										Во время курса я выполнил более десяти практических проектов, что помогло мне научиться создавать
+										адаптивные и интерактивные сайты с использованием HTML, CSS и JavaScript на основе макетов из Figma.
+									</p>
+
+									<p>
+										Позже я расширил свои знания, изучив популярные CSS-фреймворки, такие как Bootstrap и Tailwind CSS,
+										и создал несколько проектов с их применением.
+										Также я получил опыт работы с JavaScript-фреймворками, такими как VueJS и NuxtJS, что позволило мне
+										разрабатывать более динамичные и масштабируемые приложения.
+									</p>
+
+									<p>
+										В настоящее время я прохожу продвинутый курс по NextJS на <a href="https://praktikum.sammi.ac/"
+											class="text-green-500">sammi.ac</a>, где продолжаю совершенствовать свои навыки
+										frontend-разработки.
+										Благодаря накопленным знаниям и опыту я способен создавать современные, удобные и функциональные
+										веб-сайты.
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<hr class="border-black dark:border-white">
+
+		<!-- НАВЫКИ -->
+		<section id="skills" class="bg-white dark:bg-gray-800">
+			<div class="container">
+				<div class="isolate px-6 py-18 sm:py-32 lg:px-8 skills min-h-screen flex items-center justify-center flex-col">
+
+					<div class="mx-auto max-w-2xl text-center mb-10 md:mb-20 relative">
+						<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+							Мои навыки
+						</h2>
+						<p class="mt-4 text-lg/8 text-gray-600 dark:text-white">У меня есть опыт работы со следующими технологиями.
+						</p>
+					</div>
+
+					<div class="w-[90vw] sm:w-[80vw] md:w-[75vw] flex flex-wrap items-center justify-center gap-2 md:gap-4">
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26" />
+								<path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529" />
+								<path
+									d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+									fill="white" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8" />
+								<path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD" />
+								<path
+									d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z"
+									fill="white" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<title>file_type_scss2</title>
+								<path d="M16,2A14,14,0,1,1,2,16,14,14,0,0,1,16,2Z" style="fill:#c69;fill-rule:evenodd" />
+								<path
+									d="M24.782,7.992c-.634-2.486-4.757-3.3-8.659-1.918A19.605,19.605,0,0,0,9.479,9.885c-2.149,2.01-2.492,3.76-2.351,4.491.5,2.58,4.033,4.266,5.486,5.517V19.9c-.428.211-3.564,1.8-4.3,3.42-.774,1.712.123,2.94.718,3.105A4.4,4.4,0,0,0,13.78,24.5a4.824,4.824,0,0,0,.472-4.288,5.639,5.639,0,0,1,2.143-.123c2.456.287,2.938,1.82,2.846,2.462a1.62,1.62,0,0,1-.779,1.1c-.172.107-.225.143-.21.223.021.115.1.111.247.086a1.915,1.915,0,0,0,1.336-1.707c.059-1.5-1.382-3.186-3.934-3.143a6.736,6.736,0,0,0-2.189.3c-.035-.04-.071-.08-.108-.12-1.578-1.683-4.494-2.874-4.371-5.137.045-.823.331-2.989,5.6-5.617,4.32-2.153,7.778-1.56,8.376-.247.854,1.876-1.848,5.361-6.334,5.864a3.37,3.37,0,0,1-2.833-.718c-.236-.26-.271-.271-.359-.223-.143.079-.052.309,0,.445a2.659,2.659,0,0,0,1.621,1.274,8.592,8.592,0,0,0,5.258-.52C23.283,13.362,25.405,10.437,24.782,7.992ZM13.218,20.663a3.584,3.584,0,0,1-.029,2.092q-.035.106-.077.21t-.091.2a3.911,3.911,0,0,1-.647.943c-.813.887-1.95,1.223-2.437.94-.526-.305-.263-1.556.68-2.553a9.478,9.478,0,0,1,2.474-1.762l0,0Z"
+									style="fill:#fff" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<svg fill="#7611f6" width="800px" height="800px" viewBox="0 0 24 24" role="img"
+								xmlns="http://www.w3.org/2000/svg">
+
+								<g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+								<g id="SVGRepo_iconCarrier">
+
+									<path
+										d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
+
+								</g>
+
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<title>file_type_tailwind</title>
+								<path
+									d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+									style="fill:#44a8b3" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<title>file_type_js_official</title>
+								<rect x="2" y="2" width="28" height="28" style="fill:#f5de19" />
+								<path
+									d="M20.809,23.875a2.866,2.866,0,0,0,2.6,1.6c1.09,0,1.787-.545,1.787-1.3,0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964,0-1.973,1.5-3.476,3.853-3.476a3.889,3.889,0,0,1,3.742,2.107L25,18.128A1.789,1.789,0,0,0,23.311,17a1.145,1.145,0,0,0-1.259,1.128c0,.789.489,1.109,1.618,1.6l.658.282c2.236.959,3.5,1.936,3.5,4.133,0,2.369-1.861,3.667-4.36,3.667a5.055,5.055,0,0,1-4.795-2.691Zm-9.295.228c.413.733.789,1.353,1.693,1.353.864,0,1.41-.338,1.41-1.653V14.856h2.631v8.982c0,2.724-1.6,3.964-3.929,3.964a4.085,4.085,0,0,1-3.947-2.4Z" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<title>file_type_vue</title>
+								<path d="M24.4,3.925H30L16,28.075,2,3.925H12.71L16,9.525l3.22-5.6Z" style="fill:#41b883" />
+								<path d="M2,3.925l14,24.15L30,3.925H24.4L16,18.415,7.53,3.925Z" style="fill:#41b883" />
+								<path d="M7.53,3.925,16,18.485l8.4-14.56H19.22L16,9.525l-3.29-5.6Z" style="fill:#35495e" />
+							</svg>
+						</div>
+
+						<!-- SKILL -->
+						<div
+							class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+							<?xml version="1.0" encoding="UTF-8"?>
+							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<svg width="800px" height="800px" viewBox="0 -32.5 256 256" version="1.1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+								<title>Group</title>
+								<desc>Created with Sketch.</desc>
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g transform="translate(0.000173, 0.000000)">
+										<path
+											d="M77.8911791,183.614864 C77.7012551,183.279 77.5321086,182.931804 77.384692,182.575232 C76.3622173,180.209762 76.0473968,177.598605 76.478347,175.057899 L15.9931374,175.057899 L105.88125,16.874014 L135.390782,68.7489446 L143.947746,53.6076496 L118.223538,8.29039232 C117.503793,6.98418906 113.158668,0 105.667993,0 C102.282527,0 97.4309144,1.46614656 93.485647,8.39702119 L2.42461749,168.500225 C1.65155838,169.8864 -2.10710822,177.163819 1.62490116,183.614864 C3.33096269,186.547156 6.9563432,190.039251 14.9535063,190.039251 L91.2197845,190.039251 C83.2759358,190.039251 79.5972406,186.600471 77.8911791,183.614864 Z"
+											fill="#01C58E">
+
+										</path>
+										<path
+											d="M253.242307,168.500225 L178.415518,36.6803211 C177.64246,35.2941462 173.323992,28.2832999 165.806658,28.2832999 C162.421193,28.2832999 157.56958,29.7227893 153.624314,36.6536639 L143.947746,53.6076496 L152.558025,68.7489446 L165.88663,45.157314 L239.913702,175.057899 L211.763688,175.057899 C212.123898,177.20534 211.921853,179.409465 211.17723,181.45563 C211.020409,181.907379 210.824167,182.344463 210.590771,182.761832 L210.350856,183.241662 C206.565533,189.692707 198.381769,190.039251 196.782337,190.039251 L240.820047,190.039251 C242.446137,190.039251 250.603243,189.692707 254.388568,183.241662 C256.067972,180.309369 257.267546,175.377785 253.242307,168.500225 Z"
+											fill="#108775">
+
+										</path>
+										<path
+											d="M210.350856,183.241662 L210.590771,182.761832 C210.824167,182.344463 211.020409,181.907379 211.17723,181.45563 C211.921853,179.409465 212.123898,177.20534 211.763688,175.057899 C211.348809,172.741872 210.517913,170.520128 209.311226,168.500225 L152.611339,68.7489446 L143.947746,53.6076496 L135.337467,68.7489446 L78.6642383,168.500225 C77.5638612,170.544123 76.8243845,172.762554 76.478347,175.057899 C76.0222311,177.590906 76.3092441,180.201797 77.3047209,182.575232 C77.4521368,182.931805 77.6212834,183.279 77.8112079,183.614864 C79.5172694,186.547156 83.1426494,190.039251 91.1398127,190.039251 L196.702365,190.039251 C198.381769,190.039251 206.565533,189.692707 210.350856,183.241662 L210.350856,183.241662 Z M143.947746,83.89024 L195.769362,175.057899 L92.1527868,175.057899 L143.947746,83.89024 Z"
+											fill="#2F495E">
+
+										</path>
+									</g>
+								</g>
+							</svg>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<hr class="border-black dark:border-white">
+
+		<!-- ПОРТФОЛИО -->
+		<section id="portfolio" class="bg-white dark:bg-gray-700">
+			<div class="container">
+				<div class="px-[5%] py-18 sm:py-32 lg:px-8">
+
+					<div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+						<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+							Моё портфолио
+						</h2>
+						<p class="mt-4 text-lg/8 text-gray-600 dark:text-white">Коллекция веб-сайтов и приложений, которые я создал
+							с использованием современных веб-технологий.
+						</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-15">
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/zosale.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Zosale</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript • Bootstrap</p>
+								<a target="_blank" href="https://zosale.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/team.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">My team</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-team.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/shortening.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Shortly</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-shortening.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/rich-bank.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Easybank</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://rich-bank.vercel.app"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/positivus.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Positivus</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-positivus.vercel.app"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/portfolio.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Portfolio</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-portfolio.vercel.app"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/n24.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">N24</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-n24.vercel.app"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/fngsk.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Fngsk</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • Bootstrap • JavaScript</p>
+								<a target="_blank" href="https://fngsk.vercel.app"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/coffee-roasters.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Coffee roasters</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-coffee.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/bookmark.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Bookmark</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-bookmark.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/countries.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Countries</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-countries.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+
+						<!-- CARD -->
+						<div
+							class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300">
+							<img src="../img/portfolio/apple-watch.png" alt="Project Image" class="w-full h-56 object-cover">
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">Apple watch</h2>
+								<p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+								<a target="_blank" href="https://uz-watch.vercel.app/"
+									class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Открыть
+									сайт</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<hr class="border-black dark:border-white">
+
+		<!-- КОНТАКТЫ -->
+		<section id="contact" class="bg-white dark:bg-gray-800">
+			<div class="container">
+				<div class="isolate  px-6 py-18 sm:py-32 lg:px-8">
+					<div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+						<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+							Свяжитесь со мной
+						</h2>
+						<p class="mt-4 text-lg/8 text-gray-600 dark:text-white">Давайте сотрудничать, чтобы успешно завершить ваш
+							проект.
+						</p>
+					</div>
+					<form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20 relative">
+						<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+							<div>
+								<label for="first-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Имя</label>
+								<div class="mt-2.5">
+									<input id="first-name" type="text" name="ism" autocomplete="given-name"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+								</div>
+							</div>
+							<div>
+								<label for="last-name"
+									class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Фамилия</label>
+								<div class="mt-2.5">
+									<input id="last-name" type="text" name="familiya" autocomplete="family-name"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+								</div>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="email" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Электронная
+									почта</label>
+								<div class="mt-2.5">
+									<input id="email" type="email" name="pochta" autocomplete="email"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+								</div>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="message"
+									class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Сообщение</label>
+								<div class="mt-2.5">
+									<textarea id="message" name="message" rows="4"
+										class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="mt-10">
+							<button type="submit"
+								class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Давайте
+								поговорим</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<hr class="border-black dark:border-white">
+
+	<!-- SITE-FOOTER -->
+	<footer class="bg-white dark:bg-gray-700">
+		<div class="container">
+			<div
+				class="site-footer flex flex-col-reverse justify-between items-center p-8 md:flex-row gap-5 text-center md:text-left">
+				<strong class="dark:text-white">Nodirbek Abdumalikov - @nodmalikov</strong>
+				<div class="flex justify-center items-center gap-4">
+					<a target="_blank" href="https://facebook.com/nodmalikov">
+						<i class="fa-brands fa-facebook dark:text-white"></i>
+					</a>
+					<a target="_blank" href="https://x.com/nodmalikov">
+						<i class="fa-brands fa-x-twitter dark:text-white"></i>
+					</a>
+					<a target="_blank" href="https://youtube.com/@nodmalikov">
+						<i class="fa-brands fa-youtube dark:text-white"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- LOADER -->
+	<div class="loader-wrapper bg-white dark:bg-gray-600">
+		<span class="loader"></span>
+	</div>
+
+	<!-- SCROLL-TOP -->
+	<a id="scroll-top" class="scroll-top flex items-center justify-center"><i
+			class="fa-solid fa-arrow-up text-white text-2xl"></i></a>
+
+	<!-- JS-LINKS -->
+	<script src="../app.js"></script>
+</body>
+
+</html>
