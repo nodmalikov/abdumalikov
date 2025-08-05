@@ -35,8 +35,7 @@
             <div class="container">
                 <header class="absolute inset-x-0 top-0 z-20">
                     <nav aria-label="Global" class="flex items-center justify-end lg:justify-center p-6 lg:px-8">
-                        <div class="flex lg:flex">
-                        </div>
+
                         <div class="flex lg:hidden">
                             <button type="button" command="show-modal" commandfor="mobile-menu"
                                 class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white">
@@ -48,7 +47,8 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="hidden lg:flex lg:gap-x-12 p-2 rounded" id="nav-menu">
+
+                        <div class="hidden lg:flex items-center lg:gap-x-12 p-2 rounded" id="nav-menu">
                             <a href="#about"
                                 class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">About</a>
                             <a href="#education"
@@ -59,6 +59,32 @@
                                 class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Portfolio</a>
                             <a href="#contact"
                                 class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Contact</a>
+
+                            <!-- LANGUAGE SWITCHER -->
+                            <div class="relative inline-block text-left">
+                                <button id="langToggle-desktop" type="button"
+                                    class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-white">
+                                    <i class="fa-solid fa-language"></i>
+                                    <span class="font-bold text-sm font-sans">UZ</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <!-- DROPDOWN MENU -->
+                                <div id="langMenu-desktop"
+                                    class="absolute mt-2 w-30 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-md shadow-lg hidden z-10">
+                                    <a href="index.ru.html"
+                                        class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <span class="text-sm font-sans">RU</span>
+                                    </a>
+                                    <a href="index.en.html"
+                                        class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <span class="text-sm font-sans">EN</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                     <el-dialog>
@@ -90,6 +116,33 @@
                                                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Portfolio</a>
                                                 <a href="#contact"
                                                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Contact</a>
+
+                                                <!-- LANGUAGE SWITCHER -->
+                                                <div class="relative inline-block text-left z-50">
+                                                    <button id="langToggle-mobile" type="button"
+                                                        class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-white">
+                                                        <i class="fa-solid fa-language"></i>
+                                                        <span class="font-bold text-sm font-sans">UZ</span>
+                                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                            viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                        </svg>
+                                                    </button>
+
+                                                    <!-- DROPDOWN MENU -->
+                                                    <div id="langMenu-mobile"
+                                                        class="absolute mt-2 w-30 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-md shadow-lg hidden z-10">
+                                                        <a href="index.ru.html"
+                                                            class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                            <span class="text-sm font-sans">RU</span>
+                                                        </a>
+                                                        <a href="index.en.html"
+                                                            class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                            <span class="text-sm font-sans">EN</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +152,7 @@
                     </el-dialog>
                 </header>
 
-                <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="relative isolate px-2 pt-14 lg:px-4">
                     <div class="mx-auto max-w-2xl py-18 sm:py-32">
                         <div class="text-center">
                             <img src="./img/nodmalikov.png" alt="Nodirbek's image"
@@ -239,7 +292,6 @@
                         <!-- SKILL -->
                         <div
                             class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
-                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                             <svg width="800px" height="800px" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26" />

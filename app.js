@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			})
 	})
 
-	// SCROLL TOP
+	// SCROLL-TOP
 	let scrollTop = document.querySelector('.scroll-top')
 
 	function toggleScrollTop() {
@@ -79,4 +79,35 @@ window.addEventListener('DOMContentLoaded', () => {
 	})
 
 	document.addEventListener('scroll', toggleScrollTop)
+
+	// LANG-TOGGLE
+	const langToggleDesktop = document.getElementById('langToggle-desktop')
+	const langMenuDesktop = document.getElementById('langMenu-desktop')
+
+	langToggleDesktop?.addEventListener('click', () => {
+		langMenuDesktop.classList.toggle('hidden')
+	})
+
+	// MOBILE TOGGLE
+	const langToggleMobile = document.getElementById('langToggle-mobile')
+	const langMenuMobile = document.getElementById('langMenu-mobile')
+
+	langToggleMobile?.addEventListener('click', () => {
+		langMenuMobile.classList.toggle('hidden')
+	})
+
+	window.addEventListener('click', e => {
+		if (
+			!langToggleDesktop.contains(e.target) &&
+			!langMenuDesktop.contains(e.target)
+		) {
+			langMenuDesktop.classList.add('hidden')
+		}
+		if (
+			!langToggleMobile.contains(e.target) &&
+			!langMenuMobile.contains(e.target)
+		) {
+			langMenuMobile.classList.add('hidden')
+		}
+	})
 })

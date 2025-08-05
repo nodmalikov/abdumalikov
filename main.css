@@ -68,6 +68,11 @@ img {
 	color: rgb(254, 230, 72, 0.2);
 }
 
+#langToggle-mobile,
+#langToggle-desktop {
+	border-radius: 50px;
+}
+
 /* SCROLL-TOP */
 .scroll-top {
 	position: fixed;
