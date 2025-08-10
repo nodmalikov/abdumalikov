@@ -181,6 +181,10 @@ input:-webkit-autofill {
 	}
 }
 
+.skills [class*='w-[90vw]'] > div:nth-last-child(-n + 3) svg {
+	opacity: 0.4;
+}
+
 /* NAV-ITEM */
 .scroll-text {
 	border-bottom: 2px solid transparent;
