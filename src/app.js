@@ -28,8 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// FORM
 	const form = document.querySelector('form'),
-		telegramTokenBot = '7712362635:AAEsc4ysR8uaniRRNMTWWRiDVIJj3lxNRkY',
-		chatId = '7344685069'
+		telegramTokenBot = '8209027603:AAGu0xIWR40YYo0chlvOovwxmnS8AdugWUg',
+		chatId = '7599400224'
 
 	form.addEventListener('submit', event => {
 		event.preventDefault()
