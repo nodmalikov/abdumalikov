@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nodirbek Abdumalikov</title>
+
+  <meta name="description"
+    content="Nodirbek Abdumalikovning shaxsiy portfolio veb-saytiga xush kelibsiz. HTML, CSS, JavaScript, Tailwind CSS va Bootstrap texnologiyalari yordamida zamonaviy, moslashuvchan va tezkor veb-saytlar yaratishga ixtisoslashgan frontend dasturchi." />
+
+  <meta name="author" content="Nodirbek Abdumalikov" />
+
+  <meta name="keywords"
+    content="Nodirbek, frontend dasturchi, veb dasturchi, HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, portfolio" />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://abdumalikov.vercel.app/" />
+
+  <meta property="og:title" content="Nodirbek Abdumalikov" />
+  <meta property="og:description"
+    content="Nodirbek — frontend dasturchi. Bootstrap va Tailwind CSS asosida tezkor, SEOga mos va foydalanuvchi uchun qulay veb-saytlar yaratadi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdumalikov.vercel.app/" />
+
+  <!-- TAILWIND-CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- CSS-LINKLAR -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./main.css">
+
+  <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- SITE-MAIN -->
+  <main class="main-content">
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-white dark:bg-gray-800">
+      <div class="container">
+        <header class="absolute inset-x-0 top-0 z-20">
+          <nav aria-label="Global" class="flex items-center justify-end lg:justify-center p-6 lg:px-8">
+
+            <div class="flex lg:hidden">
+              <button type="button" command="show-modal" commandfor="mobile-menu"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white">
+                <span class="sr-only">Asosiy menyuni ochish</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                  aria-hidden="true" class="size-6">
+                  <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="hidden lg:flex items-center lg:gap-x-12 p-2 rounded" id="nav-menu">
+              <a href="#about" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Men
+                haqimda</a>
+              <a href="#education" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Ta'lim</a>
+              <a href="#skills"
+                class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Ko'nikmalar</a>
+              <a href="#portfolio"
+                class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Portfolio</a>
+              <a href="#contact" class="scroll-text text-sm/6 font-semibold text-gray-700 dark:text-white">Aloqa</a>
+            </div>
+          </nav>
+          <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+              <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel
+                  class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 max-h-screen sm:ring-gray-900/10 dark:bg-gray-700">
+                  <div class="flex items-center justify-end">
+                    <button type="button" command="close" commandfor="mobile-menu"
+                      class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-white">
+                      <span class="sr-only">Menyuni yopish</span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                      <div class="space-y-2 py-6">
+                        <a href="#about"
+                          class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Men
+                          haqimda</a>
+                        <a href="#education"
+                          class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Ta'lim</a>
+                        <a href="#skills"
+                          class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Ko'nikmalar</a>
+                        <a href="#portfolio"
+                          class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Portfolio</a>
+                        <a href="#contact"
+                          class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">Aloqa</a>
+                      </div>
+                    </div>
+                  </div>
+                </el-dialog-panel>
+              </div>
+            </dialog>
+          </el-dialog>
+        </header>
+
+        <div class="relative isolate px-2 pt-14 lg:px-4">
+          <div class="mx-auto max-w-2xl py-18 sm:py-32">
+            <div class="text-center">
+              <img src="./img/nodirbek.png" alt="Nodirbekning rasmi" class="ml-auto mr-auto" width="250" height="250">
+              <h1
+                class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mt-5 dark:text-white">
+                Nodirbek</h1>
+              <p class="mt-4 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-white">
+                Salom! Men frontend dasturchiman. Moslashuvchan, zamonaviy va tez ishlaydigan
+                veb-saytlar yarataman. HTML, CSS, JavaScript va zamonaviy frontend texnologiyalardan
+                foydalangan holda, foydalanuvchiga qulay va samarali interfeyslar ishlab chiqaman.
+              </p>
+              <div class="flex justify-center mt-8">
+                <div
+                  class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-green-500 hover:ring-green-600 uppercase dark:text-white transition">
+                  Loyihalarim • <a href="https://github.com/nodmalikov"
+                    class="font-semibold text-indigo-600 dark:text-green-400"><span aria-hidden="true"
+                      class="absolute inset-0"></span>Source code</a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center gap-4 mt-8">
+                <a target="_blank" href="https://linkedin.com/in/nodmalikov">
+                  <i class="fa-brands fa-linkedin dark:text-white"></i>
+                </a>
+                <a target="_blank" href="https://t.me/nodmalikov">
+                  <i class="fa-brands fa-telegram dark:text-white"></i>
+                </a>
+                <a target="_blank" href="https://instagram.com/nodmalikov">
+                  <i class="fa-brands fa-instagram dark:text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-black dark:border-white">
+
+    <!-- EDUCATION -->
+    <section id="education" class="bg-white dark:bg-gray-700">
+      <div class="container">
+        <div class="isolate px-2 py-18 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+              Ta'lim
+            </h2>
+            <p class="mt-4 text-lg/8 text-gray-600 dark:text-white">
+              Turli onlayn kurslar va mustaqil o‘rganish orqali bilimlarimni mustahkamladim.
+            </p>
+          </div>
+
+          <div class="max-w-[95vw] md:max-w-[85vw] mx-auto p-2">
+            <div
+              class="flex flex-col-reverse xl:flex-row-reverse items-stretch gap-6 bg-white dark:bg-gray-500 shadow hover:shadow-xl transition-shadow duration-300 rounded-4xl p-4 md:p-6 w-full">
+
+              <!-- Rasm -->
+              <div class="w-full xl:w-1/2">
+                <img src="./img/sertifikat.png" alt="Sertifikat rasmi" class="w-full h-auto rounded-4xl object-cover" />
+              </div>
+
+              <!-- Matn -->
+              <div class="w-full xl:w-1/2 text-center md:text-left">
+                <h2 class="text-2xl font-bold text-amber-500 text-center mb-2">Dasturlashdagi yo‘lim
+                </h2>
+                <div class="text-gray-950 dark:text-white flex flex-col gap-3 text-base md:text-lg text-medium">
+                  <p>Men 25 yoshdaman. Veb-dasturlashga bo‘lgan qiziqishim YouTube va boshqa ochiq
+                    platformalardagi bepul manbalar orqali boshlandi. Qiziqishim ortib, <a href="https://mohirdev.uz/"
+                      class="text-green-500">mohirdev.uz</a> ta'lim
+                    platformasida
+                    Frontend Praktikum kursiga yozilib, bilimlarimni chuqurlashtirdim. Kurs davomida
+                    10 dan ortiq amaliy loyihalarni bajardim. Bu loyihalar menga Figma dizaynlariga
+                    asoslangan holda HTML, CSS va JavaScript yordamida moslashuvchan va interaktiv
+                    veb-saytlar yaratishni o‘rgatdi.</p>
+
+                  <p>
+                    Keyinchalik, Bootstrap va Tailwind CSS kabi mashhur CSS freymvorklarini
+                    o‘rgandim va ular asosida bir nechta loyihalarni ishlab chiqdim. Shuningdek,
+                    yanada dinamik hamda kengaytiriladigan ilovalar yaratdim.
+                  </p>
+
+                  <p>
+                    Hozirda <a href="https://praktikum.sammi.ac/" class="text-green-500">sammi.ac</a> platformasida
+                    NextJS kursida
+                    o‘qimoqdaman va frontend sohasidagi ko‘nikmalarimni yanada mustahkamlab
+                    bormoqdaman. Hozirgacha orttirgan bilim va tajribalarim yordamida funksional,
+                    zamonaviy va foydalanuvchiga qulay veb-saytlar yarata olaman.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-black dark:border-white">
+
+    <!-- SKILLS -->
+    <section id="skills" class="bg-white dark:bg-gray-800">
+      <div class="container">
+        <div class="isolate px-6 py-18 sm:py-32 lg:px-8 skills min-h-screen flex items-center justify-center flex-col">
+
+          <div class="mx-auto max-w-2xl text-center mb-10 md:mb-20 relative">
+            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+              Mening ko‘nikmalarim
+            </h2>
+            <p class="mt-4 text-lg/8 text-gray-600 dark:text-white">Quyidagi texnologiyalar bilan bemalol
+              ishlay olaman va ularni amaliyotda qo‘llay olaman.
+            </p>
+          </div>
+
+          <div class="w-[90vw] sm:w-[80vw] md:w-[75vw] flex flex-wrap items-center justify-center gap-2 md:gap-4">
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26" />
+                <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529" />
+                <path
+                  d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+                  fill="white" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8" />
+                <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD" />
+                <path
+                  d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z"
+                  fill="white" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_scss2</title>
+                <path d="M16,2A14,14,0,1,1,2,16,14,14,0,0,1,16,2Z" style="fill:#c69;fill-rule:evenodd" />
+                <path
+                  d="M24.782,7.992c-.634-2.486-4.757-3.3-8.659-1.918A19.605,19.605,0,0,0,9.479,9.885c-2.149,2.01-2.492,3.76-2.351,4.491.5,2.58,4.033,4.266,5.486,5.517V19.9c-.428.211-3.564,1.8-4.3,3.42-.774,1.712.123,2.94.718,3.105A4.4,4.4,0,0,0,13.78,24.5a4.824,4.824,0,0,0,.472-4.288,5.639,5.639,0,0,1,2.143-.123c2.456.287,2.938,1.82,2.846,2.462a1.62,1.62,0,0,1-.779,1.1c-.172.107-.225.143-.21.223.021.115.1.111.247.086a1.915,1.915,0,0,0,1.336-1.707c.059-1.5-1.382-3.186-3.934-3.143a6.736,6.736,0,0,0-2.189.3c-.035-.04-.071-.08-.108-.12-1.578-1.683-4.494-2.874-4.371-5.137.045-.823.331-2.989,5.6-5.617,4.32-2.153,7.778-1.56,8.376-.247.854,1.876-1.848,5.361-6.334,5.864a3.37,3.37,0,0,1-2.833-.718c-.236-.26-.271-.271-.359-.223-.143.079-.052.309,0,.445a2.659,2.659,0,0,0,1.621,1.274,8.592,8.592,0,0,0,5.258-.52C23.283,13.362,25.405,10.437,24.782,7.992ZM13.218,20.663a3.584,3.584,0,0,1-.029,2.092q-.035.106-.077.21t-.091.2a3.911,3.911,0,0,1-.647.943c-.813.887-1.95,1.223-2.437.94-.526-.305-.263-1.556.68-2.553a9.478,9.478,0,0,1,2.474-1.762l0,0Z"
+                  style="fill:#fff" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg fill="#7611f6" width="800px" height="800px" viewBox="0 0 24 24" role="img"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+
+                  <path
+                    d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
+
+                </g>
+
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_tailwind</title>
+                <path
+                  d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+                  style="fill:#44a8b3" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_js_official</title>
+                <rect x="2" y="2" width="28" height="28" style="fill:#f5de19" />
+                <path
+                  d="M20.809,23.875a2.866,2.866,0,0,0,2.6,1.6c1.09,0,1.787-.545,1.787-1.3,0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964,0-1.973,1.5-3.476,3.853-3.476a3.889,3.889,0,0,1,3.742,2.107L25,18.128A1.789,1.789,0,0,0,23.311,17a1.145,1.145,0,0,0-1.259,1.128c0,.789.489,1.109,1.618,1.6l.658.282c2.236.959,3.5,1.936,3.5,4.133,0,2.369-1.861,3.667-4.36,3.667a5.055,5.055,0,0,1-4.795-2.691Zm-9.295.228c.413.733.789,1.353,1.693,1.353.864,0,1.41-.338,1.41-1.653V14.856h2.631v8.982c0,2.724-1.6,3.964-3.929,3.964a4.085,4.085,0,0,1-3.947-2.4Z" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_typescript_official</title>
+                <rect x="2" y="2" width="28" height="28" rx="1.312" style="fill:#3178c6" />
+                <path
+                  d="M18.245,23.759v3.068a6.492,6.492,0,0,0,1.764.575,11.56,11.56,0,0,0,2.146.192,9.968,9.968,0,0,0,2.088-.211,5.11,5.11,0,0,0,1.735-.7,3.542,3.542,0,0,0,1.181-1.266,4.469,4.469,0,0,0,.186-3.394,3.409,3.409,0,0,0-.717-1.117,5.236,5.236,0,0,0-1.123-.877,12.027,12.027,0,0,0-1.477-.734q-.6-.249-1.08-.484a5.5,5.5,0,0,1-.813-.479,2.089,2.089,0,0,1-.516-.518,1.091,1.091,0,0,1-.181-.618,1.039,1.039,0,0,1,.162-.571,1.4,1.4,0,0,1,.459-.436,2.439,2.439,0,0,1,.726-.283,4.211,4.211,0,0,1,.956-.1,5.942,5.942,0,0,1,.808.058,6.292,6.292,0,0,1,.856.177,5.994,5.994,0,0,1,.836.3,4.657,4.657,0,0,1,.751.422V13.9a7.509,7.509,0,0,0-1.525-.4,12.426,12.426,0,0,0-1.9-.129,8.767,8.767,0,0,0-2.064.235,5.239,5.239,0,0,0-1.716.733,3.655,3.655,0,0,0-1.171,1.271,3.731,3.731,0,0,0-.431,1.845,3.588,3.588,0,0,0,.789,2.34,6,6,0,0,0,2.395,1.639q.63.26,1.175.509a6.458,6.458,0,0,1,.942.517,2.463,2.463,0,0,1,.626.585,1.2,1.2,0,0,1,.23.719,1.1,1.1,0,0,1-.144.552,1.269,1.269,0,0,1-.435.441,2.381,2.381,0,0,1-.726.292,4.377,4.377,0,0,1-1.018.105,5.773,5.773,0,0,1-1.969-.35A5.874,5.874,0,0,1,18.245,23.759Zm-5.154-7.638h4V13.594H5.938v2.527H9.92V27.375h3.171Z"
+                  style="fill:#ffffff;fill-rule:evenodd" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_reactts</title>
+                <circle cx="16" cy="15.974" r="2.5" style="fill:#007acc" />
+                <path
+                  d="M16,21.706a28.385,28.385,0,0,1-8.88-1.2,11.3,11.3,0,0,1-3.657-1.958A3.543,3.543,0,0,1,2,15.974c0-1.653,1.816-3.273,4.858-4.333A28.755,28.755,0,0,1,16,10.293a28.674,28.674,0,0,1,9.022,1.324,11.376,11.376,0,0,1,3.538,1.866A3.391,3.391,0,0,1,30,15.974c0,1.718-2.03,3.459-5.3,4.541A28.8,28.8,0,0,1,16,21.706Zm0-10.217a27.948,27.948,0,0,0-8.749,1.282c-2.8.977-4.055,2.313-4.055,3.2,0,.928,1.349,2.387,4.311,3.4A27.21,27.21,0,0,0,16,20.51a27.6,27.6,0,0,0,8.325-1.13C27.4,18.361,28.8,16.9,28.8,15.974a2.327,2.327,0,0,0-1.01-1.573,10.194,10.194,0,0,0-3.161-1.654A27.462,27.462,0,0,0,16,11.489Z"
+                  style="fill:#007acc" />
+                <path
+                  d="M10.32,28.443a2.639,2.639,0,0,1-1.336-.328c-1.432-.826-1.928-3.208-1.327-6.373a28.755,28.755,0,0,1,3.4-8.593h0A28.676,28.676,0,0,1,16.71,5.995a11.376,11.376,0,0,1,3.384-2.133,3.391,3.391,0,0,1,2.878,0c1.489.858,1.982,3.486,1.287,6.859a28.806,28.806,0,0,1-3.316,8.133,28.385,28.385,0,0,1-5.476,7.093,11.3,11.3,0,0,1-3.523,2.189A4.926,4.926,0,0,1,10.32,28.443Zm1.773-14.7a27.948,27.948,0,0,0-3.26,8.219c-.553,2.915-.022,4.668.75,5.114.8.463,2.742.024,5.1-2.036a27.209,27.209,0,0,0,5.227-6.79,27.6,27.6,0,0,0,3.181-7.776c.654-3.175.089-5.119-.713-5.581a2.327,2.327,0,0,0-1.868.089A10.194,10.194,0,0,0,17.5,6.9a27.464,27.464,0,0,0-5.4,6.849Z"
+                  style="fill:#007acc" />
+                <path
+                  d="M21.677,28.456c-1.355,0-3.076-.82-4.868-2.361a28.756,28.756,0,0,1-5.747-7.237h0a28.676,28.676,0,0,1-3.374-8.471,11.376,11.376,0,0,1-.158-4A3.391,3.391,0,0,1,8.964,3.9c1.487-.861,4.01.024,6.585,2.31a28.8,28.8,0,0,1,5.39,6.934,28.384,28.384,0,0,1,3.41,8.287,11.3,11.3,0,0,1,.137,4.146,3.543,3.543,0,0,1-1.494,2.555A2.59,2.59,0,0,1,21.677,28.456Zm-9.58-10.2a27.949,27.949,0,0,0,5.492,6.929c2.249,1.935,4.033,2.351,4.8,1.9.8-.465,1.39-2.363.782-5.434A27.212,27.212,0,0,0,19.9,13.74,27.6,27.6,0,0,0,14.755,7.1c-2.424-2.152-4.39-2.633-5.191-2.169a2.327,2.327,0,0,0-.855,1.662,10.194,10.194,0,0,0,.153,3.565,27.465,27.465,0,0,0,3.236,8.1Z"
+                  style="fill:#007acc" />
+              </svg>
+            </div>
+
+            <!-- SKILL -->
+            <div
+              class="bg-white dark:bg-gray-600 shadow hover:shadow-xl transition-shadow duration-300 w-25 h-25 md:w-30 md:h-30 flex items-center justify-center p-4 rounded-lg">
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M11.2141 0.00645944C11.1625 0.0111515 10.9982 0.0275738 10.8504 0.039304C7.44164 0.346635 4.24868 2.18593 2.22639 5.01291C1.10029 6.58476 0.380059 8.36775 0.107918 10.2563C0.0117302 10.9156 0 11.1103 0 12.0041C0 12.898 0.0117302 13.0927 0.107918 13.7519C0.760117 18.2587 3.96716 22.0452 8.31672 23.4481C9.0956 23.6991 9.91672 23.8704 10.8504 23.9736C11.2141 24.0135 12.7859 24.0135 13.1496 23.9736C14.7613 23.7953 16.1267 23.3965 17.4733 22.7091C17.6798 22.6035 17.7196 22.5754 17.6915 22.5519C17.6727 22.5378 16.793 21.3578 15.7372 19.9314L13.8182 17.339L11.4135 13.7801C10.0903 11.8235 9.00176 10.2235 8.99238 10.2235C8.98299 10.2211 8.97361 11.8024 8.96891 13.7331C8.96188 17.1138 8.95953 17.2499 8.9173 17.3296C8.85631 17.4446 8.80938 17.4915 8.71085 17.5431C8.63578 17.5807 8.57009 17.5877 8.21584 17.5877H7.80997L7.70205 17.5197C7.63167 17.4751 7.58006 17.4164 7.54487 17.3484L7.4956 17.2428L7.50029 12.539L7.50733 7.83285L7.58006 7.74136C7.6176 7.69209 7.69736 7.62875 7.75367 7.59825C7.84985 7.55133 7.88739 7.54664 8.29325 7.54664C8.77185 7.54664 8.85161 7.5654 8.97595 7.70147C9.01114 7.73901 10.3132 9.7003 11.871 12.0628C13.4287 14.4252 15.5589 17.651 16.6053 19.2346L18.5056 22.1132L18.6018 22.0499C19.4534 21.4962 20.3543 20.7079 21.0674 19.8868C22.5853 18.1437 23.5636 16.0182 23.8921 13.7519C23.9883 13.0927 24 12.898 24 12.0041C24 11.1103 23.9883 10.9156 23.8921 10.2563C23.2399 5.74957 20.0328 1.96306 15.6833 0.560125C14.9161 0.311445 14.0997 0.140184 13.1848 0.036958C12.9595 0.0134976 11.4088 -0.0123089 11.2141 0.00645944ZM16.1267 7.26511C16.2393 7.32142 16.3308 7.42933 16.3636 7.54194C16.3824 7.60294 16.3871 8.90734 16.3824 11.8469L16.3754 16.0651L15.6317 14.9249L14.8856 13.7848V10.7185C14.8856 8.73608 14.895 7.62171 14.9091 7.56775C14.9466 7.43637 15.0287 7.33315 15.1413 7.27215C15.2375 7.22288 15.2727 7.21819 15.6411 7.21819C15.9883 7.21819 16.0493 7.22288 16.1267 7.26511Z"
+                    fill="#000000" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-black dark:border-white">
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-white dark:bg-gray-700">
+      <div class="container">
+        <div class="px-[5%] py-18 sm:py-32 lg:px-8">
+
+          <div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+              Portfolio loyihalarim
+            </h2>
+            <p class="mt-4 text-lg/8 text-gray-600 dark:text-white">Frontend texnologiyalardan foydalangan
+              holda yaratgan loyihalarim namunalari.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-15">
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/zosale.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Zosale</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript • Bootstrap</p>
+                <a target="_blank" href="https://zosale.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/team.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">My team</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-team.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/shortening.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Shortly</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-shortening.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/rich-bank.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Easybank</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-bank.vercel.app"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/positivus.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Positivus</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • SCSS • JavaScript</p>
+                <a target="_blank" href="https://uz-positivus.vercel.app"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/portfolio.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Portfolio</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-portfolio.vercel.app"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/n24.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">N24</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-n24.vercel.app"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/fngsk.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Fngsk</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • Bootstrap • JavaScript</p>
+                <a target="_blank" href="https://fngsk.vercel.app"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/coffee-roasters.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Coffee roasters</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-coffee.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/bookmark.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Bookmark</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-bookmark.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/countries.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Countries</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-countries.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/apple-watch.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Apple watch</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-watch.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/todo-app.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Todo app</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Tailwind CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-todo.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/book-list.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Book list</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Tailwind CSS • JavaScript</p>
+                <a target="_blank" href="https://kitoblar-kutubxonasi.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/uzs-usd.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Currency exchange</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Bootstrap • JavaScript</p>
+                <a target="_blank" href="https://kurs-hisoblagichi.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/event-notification.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Event notification</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Bootstrap • JavaScript</p>
+                <a target="_blank" href="https://hodisa-xabarnomasi.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/me-card.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">My profile</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Tailwind CSS • JavaScript</p>
+                <a target="_blank" href="https://uz-profil.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="bg-gray-200 dark:bg-gray-300 rounded-4xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between portfolio-card">
+              <img src="./img/portfolio/e-commerce.png" alt="Project Image" class="w-full h-56 object-cover">
+              <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Commerce</h2>
+                <p class="text-sm text-gray-600 mb-3">HTML • Bootstrap • JavaScript</p>
+                <a target="_blank" href="https://xarid-savatchasi.vercel.app/"
+                  class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Jonli
+                  ko‘rish</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-black dark:border-white">
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-white dark:bg-gray-800">
+      <div class="container">
+        <div class="isolate  px-6 py-18 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center mb-10 md:mb-20">
+            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+              Men bilan bog‘laning
+            </h2>
+            <p class="mt-4 text-lg/8 text-gray-600 dark:text-white">Keling, loyihangizni muvaffaqiyatli
+              yakunlash uchun hamkorlik qilamiz.
+            </p>
+          </div>
+          <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20 relative">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label for="first-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Ism</label>
+                <div class="mt-2.5">
+                  <input id="first-name" type="text" name="ism" autocomplete="given-name"
+                    class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+                </div>
+              </div>
+              <div>
+                <label for="last-name"
+                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Familiya</label>
+                <div class="mt-2.5">
+                  <input id="last-name" type="text" name="familiya" autocomplete="family-name"
+                    class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="email" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Elektron
+                  pochta</label>
+                <div class="mt-2.5">
+                  <input required id="email" type="email" name="pochta" autocomplete="email"
+                    class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Xabar</label>
+                <div class="mt-2.5">
+                  <textarea required id="message" name="message" rows="4"
+                    class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-white"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <button type="submit"
+                class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Xabar
+                qoldiring</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <hr class="border-black dark:border-white">
+
+  <!-- SITE-FOOTER -->
+  <footer class="bg-white dark:bg-gray-700">
+    <div class="container">
+      <div
+        class="site-footer flex flex-col-reverse justify-between items-center p-8 md:flex-row gap-5 text-center md:text-left">
+        <strong class="dark:text-white">Nodirbek Abdumalikov - @nodmalikov</strong>
+        <div class="flex justify-center items-center gap-4">
+          <a target="_blank" href="https://facebook.com/nodmalikov">
+            <i class="fa-brands fa-facebook dark:text-white"></i>
+          </a>
+          <a target="_blank" href="https://x.com/nodmalikov">
+            <i class="fa-brands fa-x-twitter dark:text-white"></i>
+          </a>
+          <a target="_blank" href="https://youtube.com/@nodmalikov">
+            <i class="fa-brands fa-youtube dark:text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LOADER -->
+  <div class="loader-wrapper bg-white dark:bg-gray-600">
+    <span class="loader"></span>
+  </div>
+
+  <!-- SCROLL-TOP -->
+  <a id="scroll-top" class="scroll-top flex items-center justify-center"><i
+      class="fa-solid fa-arrow-up text-white text-2xl"></i></a>
+
+  <!-- JS-LINKS -->
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>
