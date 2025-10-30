@@ -89,4 +89,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			navItem.classList.add('nav-item-active')
 		})
 	})
+
+	//BORDER-NAV
+	document.querySelector('.nav').addEventListener('click', e => {
+		if (e.target.classList.contains('navlink')) {
+			document
+				.querySelectorAll('.navlink')
+				.forEach(item => item.classList.remove('border-active'))
+			e.target.classList.add('border-active')
+		}
+	})
 })

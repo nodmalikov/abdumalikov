@@ -188,3 +188,11 @@ input:-webkit-autofill {
 textarea {
 	min-height: 112px;
 }
+
+.navlink {
+	border-left: 1px solid transparent;
+}
+
+.border-active {
+	border-color: #000;
+}
