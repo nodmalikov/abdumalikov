@@ -184,3 +184,7 @@ input:-webkit-autofill {
 .nav-item-active {
 	border-bottom-color: #fee648;
 }
+
+textarea {
+	min-height: 112px;
+}
