@@ -99,4 +99,60 @@ window.addEventListener('DOMContentLoaded', () => {
 			e.target.classList.add('border-active')
 		}
 	})
+
+	// TAB-SWITCH
+	const buttons = document.querySelectorAll('.tab-btn')
+	const cards = document.querySelectorAll('.portfolio-card')
+
+	// Tugmalarni bosilishini kuzatish
+	buttons.forEach(button => {
+		button.addEventListener('click', e => {
+			const category = button.getAttribute('data-filter')
+
+			// 1. Aktiv klassni yangilash
+			buttons.forEach(btn => {
+				btn.classList.remove('active-tab')
+				btn.classList.add('text-gray-500', 'dark:text-gray-400')
+			})
+			button.classList.add('active-tab')
+			button.classList.remove('text-gray-500', 'dark:text-gray-400')
+
+			// 2. Cardlarni filtrlash
+			cards.forEach(card => {
+				const cardCategory = card.getAttribute('data-category')
+
+				if (category === 'all' || cardCategory === category) {
+					card.classList.remove('hidden')
+					card.style.display = 'flex'
+				} else {
+					card.classList.add('hidden')
+					card.style.display = 'none'
+				}
+			})
+		})
+	})
+
+	// ALL-PORTFOLIO
+	let portfolioAllBtn = document.querySelector('.portfolio-all-btn'),
+		portfolioInner = document.querySelector('.portfolio-inner')
+
+	function allPortfolio() {
+		portfolioInner.style.maxHeight = '100%'
+		portfolioInner.classList.add('open')
+		portfolioAllBtn.style.display = 'none'
+	}
+
+	portfolioAllBtn.addEventListener('click', () => {
+		allPortfolio()
+	})
+
+	// MOBILE-MENU
+	const mobileMenu = document.querySelector('#mobile-menu'),
+		navlinks = document.querySelectorAll('.navlink')
+
+	navlinks.forEach(navlink => {
+		navlink.addEventListener('click', () => {
+			mobileMenu.close()
+		})
+	})
 })
