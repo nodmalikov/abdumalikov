@@ -60,26 +60,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			})
 	})
 
-	// SCROLL-TOP
-	let scrollTop = document.querySelector('.scroll-top')
-
-	function toggleScrollTop() {
-		if (scrollTop) {
-			window.scrollY > 100
-				? scrollTop.classList.add('active')
-				: scrollTop.classList.remove('active')
-		}
-	}
-	scrollTop.addEventListener('click', e => {
-		e.preventDefault()
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		})
-	})
-
-	document.addEventListener('scroll', toggleScrollTop)
-
 	// NAV-ITEM
 	const navItems = document.querySelectorAll('#nav-menu a')
 	navItems.forEach(navItem => {
@@ -104,12 +84,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	const buttons = document.querySelectorAll('.tab-btn')
 	const cards = document.querySelectorAll('.portfolio-card')
 
-	// Tugmalarni bosilishini kuzatish
 	buttons.forEach(button => {
 		button.addEventListener('click', e => {
 			const category = button.getAttribute('data-filter')
 
-			// 1. Aktiv klassni yangilash
 			buttons.forEach(btn => {
 				btn.classList.remove('active-tab')
 				btn.classList.add('text-gray-500', 'dark:text-gray-400')
@@ -117,7 +95,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			button.classList.add('active-tab')
 			button.classList.remove('text-gray-500', 'dark:text-gray-400')
 
-			// 2. Cardlarni filtrlash
 			cards.forEach(card => {
 				const cardCategory = card.getAttribute('data-category')
 
